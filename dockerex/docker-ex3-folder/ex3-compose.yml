@@ -1,0 +1,7 @@
+version: '3.4'
+services:
+  nginx-container-ex3:
+    image: nginx:1.19.10
+    restart: on-failure
+    ports:
+      - 8081:80

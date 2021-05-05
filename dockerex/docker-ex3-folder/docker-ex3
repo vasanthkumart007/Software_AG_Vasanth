@@ -1,0 +1,17 @@
+#!/bin/bash
+#Author: VASANTH
+#Date: May 2 2021
+
+echo "THIS SCRIPT WILL CREATE A CONTAINER NGINX:1.19.10"
+echo "--------------------"
+sleep 1
+echo "IT WILL LISTENS TO THE PORT http://localhost:8080"
+echo "--------------------"
+
+docker-compose -f ex3-compose.yml up
+
+sleep 1
+echo
+echo "-------------------"
+echo "CONTAINER EXITED SINCE CTRL+C IS PRESSED"
+echo "--------------------"

@@ -1,0 +1,27 @@
+#!/bin/bash
+#Author: VASANTH
+#Date: May 2 2021
+
+echo "THIS SCRIPT WILL CREATE A CONTAINER WITH IMAGE REDIS:6.2.2"
+echo "--------------------"
+sleep 1
+echo "IT WILL LISTENS TO THE PORT http://localhost:6379"
+echo "--------------------"
+
+docker-compose -f redis-compose.yml up
+
+sleep 1
+echo
+echo "-------------------"
+echo "CONTAINER EXITED SINCE CTRL+C IS PRESSED"
+echo "--------------------"
+echo
+echo
+cd /
+echo
+cd mnt
+cd redis-data
+ls -ltr
+echo
+echo
+pwd

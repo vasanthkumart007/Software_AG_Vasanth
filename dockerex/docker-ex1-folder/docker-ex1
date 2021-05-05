@@ -1,0 +1,17 @@
+#!/bin/bash
+#Author: VASANTH
+#Date: May 2 2021
+
+echo "THIS SCRIPT WILL CREATE A CONTAINER NGINX:1.19.10"
+echo "--------------------"
+sleep 1
+echo "ONCE CONTAINER EXITED THE CONTAINER WILL BE DESTROYED"
+echo "--------------------"
+
+docker run --rm nginx:1.19.10
+
+sleep 1
+echo
+echo "-------------------"
+echo "CONTAINER DESTROYED"
+echo "--------------------"

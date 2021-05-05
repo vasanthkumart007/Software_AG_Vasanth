@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+  nginx-network:
+    image: nginx:1.19.10
+    networks:
+      - test-app
+  redis-network:
+  
+    image: redis:6.2.2
+    networks:
+      - test-app
+  
+networks:
+  test-app:
+    driver: bridge
+  

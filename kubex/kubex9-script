@@ -1,0 +1,24 @@
+#!/bin/bash
+#Desc: This script will create a persistent volume claim from redis-pv persistent volume
+
+echo "This script will create a persistent volume claim from redis-pv persistent volume"
+echo "-----------------------------------------"
+sleep 1
+echo "Creating a persistent volume first"
+echo "-----------------------------------------"
+./kubex8-script
+echo "-----------------------------------------"
+echo "Creatin a persistent volume claim"
+echo "-----------------------------------------"
+kubectl create -f kubex9-pvc.yaml
+echo "-----------------------------------------"
+sleep 2
+echo "-----------------------------------------"
+echo "-----------------------------------------"
+echo "-----------------------------------------"
+echo "------------DISPLAY PV AND PVC-----------"
+kubectl get pv,pvc
+echo "-----------------------------------------"
+echo "-----------------------------------------"
+echo "-----------------------------------------"
+echo :::::::::::::::END::::::::::::::::::::::::

@@ -1,0 +1,25 @@
+#!/bin/bash
+#Date: May 4 2021
+#Author: Vasanth-ubuntu
+#Desc: Create a pod called web-server with nginx:1.16.10 and redis:6.2.2
+
+echo "----------"
+echo "CREATING POD web-server"
+echo "----------"
+sleep 1
+
+kubectl create -f kubex3-replicaset.yaml
+sleep 10
+echo "----------"
+echo "AVAILABLE PODS"
+echo "----------"
+
+kubectl get pods
+echo "----------"
+kubectl get replicasets
+sleep 10
+echo "----------"
+echo "POD DESCRIPTION"
+echo "----------"
+ 
+kubectl describe pods

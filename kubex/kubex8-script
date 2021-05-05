@@ -1,0 +1,13 @@
+#!/bin/bash
+#Desc: this script will create a persistent volume for redis-pv
+
+echo "      CREATING PERSISTENT VOLUMES"
+echo "--------------------------"
+kubectl create -f kubex8-pv.yaml
+echo "--------------------------"
+echo "      VIEW PERSISTENT VOLUMES"
+echo "--------------------------"
+kubectl get pv
+echo "--------------------------"
+echo "--------------------------"
+echo "----------END --------------"

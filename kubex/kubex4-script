@@ -1,0 +1,31 @@
+#!/bin/bash
+#Date: May 4 2021
+#Author: Vasanth-ubuntu
+#Desc: Create a pod called web-server with nginx:1.16.10 and redis:6.2.2 and expose it on port 80 and 6379
+
+echo "----------"
+echo "CREATING POD web-server"
+echo "----------"
+sleep 1
+
+
+./kubex3-script
+kubectl create -f kubex4-service.yaml
+sleep 10
+echo "----------"
+echo "AVAILABLE PODS"
+echo "----------"
+
+kubectl get pods
+echo "----------"
+kubectl get replicasets
+echo "----------"
+kubectl get svc
+sleep 10
+echo "----------"
+echo "POD,SERVICE,REPLICASETS DESCRIPTION"
+echo "----------"
+kubectl describe pods,svc,replicasets
+echo "----------"
+echo "PORTS EXPOSED"
+minikube service ex4-service --url

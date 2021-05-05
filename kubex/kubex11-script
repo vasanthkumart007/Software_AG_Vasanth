@@ -1,0 +1,24 @@
+#!/bin/bash
+#Author: Vasanth
+#Date: May 4 2021
+#Desc: Update storage of kubex8-pv.yaml
+
+kubectl create -f kubex8-pv.yaml --record
+echo
+echo
+sleep 3
+nano kubex8-pv.yaml
+echo
+echo "EDITED"
+echo
+kubectl apply -f kubex8-pv.yaml --record
+echo
+echo "CONFIGURED"
+echo
+echo "-----------------VIEW THROUGH ANNOTATIONS TO CHECK THE RECORDED VALUE-----------------"
+echo
+sleep 3
+kubectl get pv redis-pv -o yaml
+echo
+echo
+echo "-----------------END-----------------"

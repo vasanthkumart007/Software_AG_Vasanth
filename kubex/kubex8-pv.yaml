@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis-pv
+  labels:
+    name : redis-pv
+spec:
+  hostPath:
+    path: /mnt/redis/data
+  storageClassName: vasanthstorage
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  

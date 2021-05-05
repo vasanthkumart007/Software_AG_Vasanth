@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ex4-service
+  labels:
+    name: ex4-service
+spec:
+  type: NodePort
+  ports:
+    - name: nginx-web-port
+      port: 80
+      targetPort: 80
+      nodePort: 30001
+    - name: redis-web-port
+      port: 6379
+      targetPort: 6379
+      nodePort: 30002
+  selector:
+    name: web-server

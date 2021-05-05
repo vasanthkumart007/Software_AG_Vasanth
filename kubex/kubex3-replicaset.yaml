@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: web-server-replicaset
+  labels:
+    name: web-server-replicaset
+spec:
+  selector:
+    matchLabels:
+      name: web-server
+  replicas: 1  
+  template:
+    metadata:
+      name: web-server
+      labels: 
+        name: web-server
+    
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.19.10
+        - name: redis
+          image: redis:6.2.2
+  

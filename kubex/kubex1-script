@@ -1,0 +1,23 @@
+#!/bin/bash
+#Date: May 4 2021
+#Author: Vasanth-ubuntu
+#Desc: Create a pod called web-server with nginx:1.16.10
+
+echo "----------"
+echo "CREATING POD web-server"
+echo "----------"
+sleep 1
+
+kubectl create -f kubex1.yaml
+sleep 10
+echo "----------"
+echo "AVAILABLE PODS"
+echo "----------"
+
+kubectl get pods
+sleep 10
+echo "----------"
+echo "POD DESCRIPTION"
+echo "----------"
+ 
+kubectl describe pods

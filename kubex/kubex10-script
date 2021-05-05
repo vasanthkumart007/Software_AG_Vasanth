@@ -1,0 +1,30 @@
+#!/bin/bash
+#Author: Vasanth
+#Date: MAy 4 2021
+#Desc: Create a pod redis which binds the redis-pvc to the path /data with image redis:6.2.2
+
+echo "CREATING PV AND PVC"
+echo "--------------------"
+./kubex9-script
+echo "--------------------"
+echo "--------------------"
+echo "--------------------"
+echo "CREATING A POD REDIS THAT BINDS THE redis-pvc TO THE PATH /data WITH IMAGE redis:6.2.2"
+echo "--------------------"
+kubectl create -f kubex10-pod-binding.yaml
+echo "--------------------"
+echo "ALL DETAILS"
+sleep 2
+echo "--------------------"
+sleep 3
+kubectl get all
+echo "--------------------"
+echo "--------------------"
+echo "--------------------"
+echo
+sleep 1
+echo
+sleep 1
+echo
+sleep 1
+echo "END"

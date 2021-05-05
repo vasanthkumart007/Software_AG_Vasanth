@@ -1,0 +1,83 @@
+#!/bin/bash
+#Date: May 4 2021
+#Author: Vasanth
+#Desc: Scale up replicas
+
+echo "------------------------------"
+echo "SCALING WEB_DEPLOY TO 5 REPLICAS"
+echo "------------------------------"
+
+echo
+echo
+echo
+
+echo "CREATING WEB_DEPLOY DEPLOYMENT"
+echo "------------------------------"
+echo "------------------------------"
+echo "------------------------------"
+kubectl create -f kubex5-deployment.yaml --record
+echo "------------------------------"
+echo "------------------------------"
+echo "------------------------------"
+
+echo "DEPLOYMENT STATUS"
+echo "------------------------------"
+echo "------------------------------"
+echo "------------------------------"
+kubectl rollout status deployment web-deploy
+echo "------------------------------"
+echo "------------------------------"
+echo "------------------------------"
+
+echo "ALL DETAILS BEFORE SCALING UP"
+sleep 1
+echo "------------------------------"
+sleep 1
+echo "------------------------------"
+sleep 1
+echo "------------------------------"
+sleep 5
+kubectl get all
+sleep 1
+echo "------------------------------"
+sleep 1
+echo "------------------------------"
+sleep 1
+echo "------------------------------"
+
+
+echo "SCALING UP"
+echo "------------------------------"
+echo "------------------------------"
+echo "------------------------------"
+kubectl scale deployment web-deploy --replicas=5 --record
+echo "------------------------------"
+echo "------------------------------"
+echo "------------------------------"
+
+
+echo "ALL DETAILS AFTER SCALING UP"
+sleep 1
+echo "------------------------------"
+sleep 1
+echo "------------------------------"
+sleep 1
+echo "------------------------------"
+sleep 5
+kubectl get all
+sleep 1
+echo "------------------------------"
+sleep 1
+echo "------------------------------"
+sleep 1
+echo "------------------------------"
+
+
+echo "HISTORY OF ROLLOUT"
+echo "------------------------------"
+
+kubectl rollout history deployment web-deploy
+echo "------------------------------"
+echo "------------------------------"
+echo "------------------------------"
+echo "SCRIPT END"

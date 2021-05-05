@@ -1,0 +1,17 @@
+#!/bin/bash
+#Date: May 4 2021
+#Author: Vasanth
+#Desc: create and deploy nginx with 2 replicas
+
+echo "THIS SCIPT WILL CREATE DEPLOYMENT web-deploy WITH nginx IMAGE WITH 2 REPLICAS"
+echo "--------------------"
+sleep 1
+kubectl create -f kubex5-deployment.yaml
+sleep 5
+echo "--------------------"
+echo "DEPLOYMENT CREATED"
+echo "--------------------"
+echo "ALL DETAILS"
+echo "--------------------"
+kubectl get all
+echo "--------------------"

@@ -1,0 +1,31 @@
+#!/bin/bash
+#Date: May 4 2021
+#Author: Vasanth-ubuntu
+#Desc: Create a pod called web-server and to expose it to the reachable cluster
+
+echo "----------"
+echo "CREATING SERVICE nginx-service"
+echo "----------"
+sleep 1
+
+kubectl create -f kubex2-service.yaml
+sleep 10
+echo "----------"
+echo "AVAILABLE PODS AND SERVICES"
+echo "----------"
+
+kubectl get pods,svc
+sleep 10
+echo "----------"
+echo "SERVICE  DESCRIPTION"
+echo "----------"
+ 
+kubectl describe svc
+echo "----------"
+echo "PORT EXPOSED"
+echo "----------"
+
+minikube service nginx-service --url
+echo "----------"
+echo "----------"
+echo "----------"
